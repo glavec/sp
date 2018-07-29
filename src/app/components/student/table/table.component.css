@@ -1,0 +1,16 @@
+.table-container {
+  background-color: #F4F8FC;
+  height: 70vh;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* .table-header {
+  border: 1px solid red;
+  height: 5%;
+} */
+
+.table-body mat-grid-list  {
+  background:white;
+  margin-top: 2px;
+}

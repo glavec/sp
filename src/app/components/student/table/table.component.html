@@ -1,0 +1,21 @@
+
+<div class="table-container">
+  <div class="table-header">
+    <mat-grid-list cols="10" rowHeight="50px">
+      <mat-grid-tile>Name</mat-grid-tile>
+      <mat-grid-tile>ID</mat-grid-tile>
+      <mat-grid-tile [colspan]= "4"></mat-grid-tile>
+      <mat-grid-tile>Hour 1</mat-grid-tile>
+      <mat-grid-tile>Hour 2</mat-grid-tile>
+      <mat-grid-tile>Hour 3</mat-grid-tile>
+      <mat-grid-tile>Frecuented</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="table-body">
+    <mat-grid-list cols="10" rowHeight="50px" *ngFor="let student of students">
+      <mat-grid-tile >{{student.name}}</mat-grid-tile>
+      <mat-grid-tile >{{student.id}}</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

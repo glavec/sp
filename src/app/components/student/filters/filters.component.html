@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-form-field>
+            <mat-select  placeholder="Favorite food" >
+              <mat-option *ngFor="let food of foods" [value]="food.value" (onSelectionChange)="filterChanged($event)">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      </mat-toolbar-row>
+
+</mat-toolbar>

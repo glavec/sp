@@ -1,0 +1,24 @@
+
+.mat-select{
+    /* border: 2px solid gray; */
+    background-color: #1C6CA8;
+    /* height: 30px; */
+    
+}
+
+.mat-form-field-infix {
+    text-align: center
+  }
+
+.mat-seleted-value {
+text-align: center;
+    font-size: 10px;
+}
+
+/* .mat-form-field{
+    line-height: 0;
+} */
+
+.mat-form-field-wrapper .mat-form-field-underline {
+    height: 0 !important;
+}
