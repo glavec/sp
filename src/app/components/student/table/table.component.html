@@ -1,21 +1,62 @@
 
 <div class="table-container">
-  <div class="table-header">
-    <mat-grid-list cols="10" rowHeight="50px">
-      <mat-grid-tile>Name</mat-grid-tile>
-      <mat-grid-tile>ID</mat-grid-tile>
+  <div class="table-header" style="color: darkgrey">
+    <mat-grid-list cols="10" rowHeight="55px">
+      <mat-grid-tile>Name of Student</mat-grid-tile>
+      <mat-grid-tile>Student ID</mat-grid-tile>
       <mat-grid-tile [colspan]= "4"></mat-grid-tile>
-      <mat-grid-tile>Hour 1</mat-grid-tile>
-      <mat-grid-tile>Hour 2</mat-grid-tile>
-      <mat-grid-tile>Hour 3</mat-grid-tile>
+      <mat-grid-tile>
+        <br/>Hour 1
+          <br />(11:00)
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <br/>Hour 2
+        <br />(12:00)
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <br/>Hour 3
+        <br />(13:00)
+      </mat-grid-tile>
       <mat-grid-tile>Frecuented</mat-grid-tile>
     </mat-grid-list>
   </div>
 
-  <div class="table-body">
+  <div class="table-body" style="color: grey">
     <mat-grid-list cols="10" rowHeight="50px" *ngFor="let student of students">
-      <mat-grid-tile >{{student.name}}</mat-grid-tile>
+      <mat-grid-tile >
+        <div class="text-inside-grid">
+          <div style="float: left;"><img  class="example-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" /></div>
+          <div style=" float: right;  position: absolute; top: 0; bottom: 0; left: 42px;">{{student.name}}</div>
+        </div>
+      </mat-grid-tile>
       <mat-grid-tile >{{student.id}}</mat-grid-tile>
+      <mat-grid-tile [colspan]= "4"></mat-grid-tile>
+      <mat-grid-tile>
+       Present <mat-slide-toggle
+                class="example-margin"
+                [color]="'primary'"
+                [checked]="student.hour_1 === 1 ? true : false">
+        </mat-slide-toggle>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        Present <mat-slide-toggle
+              class="example-margin"
+              [color]="'primary'"
+              [checked]="student.hour_2 === 1 ? true : false">
+      </mat-slide-toggle>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        Present <mat-slide-toggle
+              class="example-margin"
+              [color]="'primary'"
+              [checked]="student.hour_3 === 1 ? true : false">
+      </mat-slide-toggle>
+      </mat-grid-tile>
+
+      <mat-grid-tile >2/3(33%)</mat-grid-tile>
+
     </mat-grid-list>
   </div>
 </div>

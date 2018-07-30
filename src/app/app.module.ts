@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { StudentComponent } from './components/student/student.component';
@@ -20,35 +22,42 @@ import {MatTableModule} from '@angular/material/table';
 import { TableComponent } from './components/student/table/table.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material/input';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
+
 
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    StudentComponent,
-    HeaderComponent,
-    FiltersComponent,
-    SearchPanelComponent,
-    TableComponent
+    declarations: [
+        AppComponent,
+        StudentComponent,
+        HeaderComponent,
+        FiltersComponent,
+        SearchPanelComponent,
+        TableComponent
 
-  ],
-  imports: [
-    BrowserModule,
-    StoreModule.forRoot(reducers),
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatSelectModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatGridListModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    ],
+    imports: [
+        BrowserModule,
+        StoreModule.forRoot(reducers),
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatCardModule,
+        MatSelectModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatGridListModule,
+        MatInputModule,
+        FormsModule,
+        MatSlideToggleModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

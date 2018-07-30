@@ -5,12 +5,44 @@
   padding-right: 5%;
 }
 
-/* .table-header {
-  border: 1px solid red;
-  height: 5%;
-} */
+.table-body {
+  max-height: 85%;
+  overflow-y: auto;
+}
+
+.text-inside-grid {
+  position: absolute;
+  left: 5px;
+}
 
 .table-body mat-grid-list  {
   background:white;
-  margin-top: 2px;
+  margin-top: 4px;
+}
+
+.example-margin {
+  margin: 10px;
+}
+.mat-slide-toggle:not(.mat-checked):not(.mat-disabled) .mat-slide-toggle-thumb-container .mat-slide-toggle-thumb {
+  background-color: green;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #005A9D;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -5,24 +5,24 @@ import Student from '../../../interfaces/Student';
 
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+    selector: 'app-table',
+    templateUrl: './table.component.html',
+    styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  students: Student[];
+    students: Student[];
 
-  constructor(private store: Store<State>) { 
-    this.students = []
+    constructor(private store: Store<State>) {
+        this.students = [];
 
-  }
+    }
 
-  ngOnInit() {
-    this.store.select('student')
-    .subscribe((result) => {
-      this.students = result.students      
-    })
-    
-  }
+    ngOnInit() {
+        this.store.select('student')
+            .subscribe((result) => {
+                this.students = result.students;
+            });
+
+    }
 
 }

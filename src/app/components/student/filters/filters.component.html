@@ -1,12 +1,29 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" style="padding-left: 4%">
     <mat-toolbar-row>
-        <mat-form-field>
-            <mat-select  placeholder="Favorite food" >
-              <mat-option *ngFor="let food of foods" [value]="food.value" (onSelectionChange)="filterChanged($event)">
-                {{food.viewValue}}
+        <div style="width: 200px;">
+            <mat-select  placeholder="Select Faculty">
+              <mat-option *ngFor="let filter of faxFilters" [value]="filter.value" (onSelectionChange)="filterChanged($event, 'fax')">
+                {{filter.name}}
               </mat-option>
             </mat-select>
-          </mat-form-field>
+        </div>
+
+        <div style="margin-left: 2%;width: 200px;">
+            <mat-select  placeholder="Select Course">
+                <mat-option *ngFor="let filter of courseFilters" [value]="filter.value" (onSelectionChange)="filterChanged($event, 'course')">
+                    {{filter.name}}
+                </mat-option>
+            </mat-select>
+        </div>
+
+        <div style="margin-left: 2%;width: 200px;">
+            <mat-select  placeholder="Select year">
+                <mat-option *ngFor="let filter of years" [value]="filter.value" (onSelectionChange)="filterChanged($event, 'year')">
+                    {{filter.name}}
+                </mat-option>
+            </mat-select>
+        </div>
+
       </mat-toolbar-row>
 
 </mat-toolbar>

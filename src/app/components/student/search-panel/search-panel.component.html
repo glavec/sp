@@ -1,10 +1,18 @@
 
-<div style="height: 60px;"><mat-toolbar >
+<div style="height: 60px;">
+    <mat-toolbar >
     <mat-toolbar-row>
-        <span>LOGO</span>
+        <div style="padding-left: 4%; color: grey">
+            <small>Date: 20/11/2018</small>
+            <small style="margin-left: 4%;"> Time: 10:33</small>
+            <small style="margin-left: 4%;"> Course: {{ selectedCourse.name }}</small>
+            <small style="margin-left: 4%;"> Prof: Shiba Inu </small>
+            <small style="margin-left: 4%;"> Student Presence: 33% </small>
+        </div>
         <span class="example-spacer"></span>
-        <span style="font-size: 12px">Shiba Inu</span> &nbsp;
-        <img  class="example-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" />
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Search" [(ngModel)]='name' (input)="search($event)">
+        </mat-form-field>
   
       </mat-toolbar-row>
 
